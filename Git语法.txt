@@ -87,10 +87,12 @@ ssh -T git@github.com
 		     git remote add origin git@github.com:qvanse/GitDemo.git
 	最后 执行
 	         git branch -M master 
-		     git push -u origin master
+		     git push -u origin master #-u是第一次推送时关联，以后可以用简化命令。
 git clone git@github.com:qvanse/src.git #将远程库克隆到本地
 git remote add origin git@github.com:qvanse/src.git #将本地库克隆到GitHub,远程库的名字就是origin
 ssh -T git@github #设置完成后，测试连接
+git remote -v #查看远程库信息
+git remote rm origin #解除本地和远程的绑定关系
 git pull origin master #拉取
 git push -u origin master #本地库推送到远程
 git push origin master #以后最新修改推送到github
