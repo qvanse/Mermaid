@@ -8,3 +8,12 @@ pie
     "Entertainment":10
     "Savings":15
 ```
+
+流程图（Flowchart)
+
+```
+graph LR
+   A-->B;
+   B-->C;
+   C-->D;
+```
