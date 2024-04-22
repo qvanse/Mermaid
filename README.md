@@ -1,6 +1,5 @@
 This is test.
-```
-mermaid
+```mermaid
 pie 
     title Distribution of Expenses
     "Food":60
@@ -11,9 +10,26 @@ pie
 
 流程图（Flowchart)
 
-```
+```mermaid
 graph LR
    A-->B;
    B-->C;
    C-->D;
+```
+```
+flowchart LR
+
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
+
+```mermaid
+flowchart LR
+
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
 ```
