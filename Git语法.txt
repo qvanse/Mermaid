@@ -22,6 +22,11 @@ git init #初始化本地库
 rm -rf .git #取消git
 
 git add 文件名 #文件添加到暂存区
+  a. git add file1 file2 file3 #添加3个文件
+  b. git config/* #config目录下所有文件
+  c. git home/*.php #home目录下所有php文件
+  d. git add . 或者 git add -all #添加所有文件
+  e. git add 文件夹名 #添加文件夹
 git commit -m "备注" #找文件提交到分支
 
 git status #查看工作区状态
@@ -73,7 +78,9 @@ ssh -T git@github.com
 	git commit -m "备注" #git commit 操作
 	git log #查看仓库日志
 	git status #查看仓库状态
-	
+  b.本地有Git仓库，并且已经进行了多次commit操作。
+	首先 进入本地仓库，进行init操作。
+	然后 输入git remote add origin https://github.com/qvanse/GitDemo.git #远程仓库地址
 git clone git@github.com:qvanse/src.git #将远程库克隆到本地
 git remote add origin git@github.com:qvanse/src.git #将本地库克隆到GitHub,远程库的名字就是origin
 ssh -T git@github #设置完成后，测试连接
