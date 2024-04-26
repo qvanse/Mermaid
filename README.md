@@ -94,5 +94,22 @@ Mermaid 语法高级版
     loop 或 alt：定义一个循环或条件块。
     activate 或 deactivate：定义对象的激活或停用状态。
     subroutine：定义一个子程序。
+除此外，Mermaid 还支持更多的关键字和符号，用于定义甘特图、状态图、用户旅程图等特定类型的图表。
 
-
+graph和subgraph
+以下是使用Mermaid中的graph和subgraph关键字的示例：
+```mermaid
+graph LR
+  A-->B;
+  B-->C;
+  C-->D;
+   subgraph Subgraph A
+    B1-->C1;
+    C1-->D1;
+    end
+   subgraph Subgraph B
+    B2-->C2;   
+    C2-->D2;
+    end
+  
+```
