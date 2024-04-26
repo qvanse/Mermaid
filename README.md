@@ -131,3 +131,17 @@ graph LR
 接下来，我们用subgraph创建了两个子图表subgraph A 和 subgraph B ,用于将多个开关分组。
 注意，子图表中定义的开关只能在该子图表中使用，不能在其他子图表或者图表中使用。
 使用graph和subgraph可以帮助我们更好地组织和管理复杂的流程图，将相关的开关分组并以更清晰的方式呈现。
+
+pie
+在Mermaid中，可以使用pie关键字来创建饼图。饼图用于展示数据占比。
+以下是一个示例：
+```mermaid
+pie
+  title Example Pie Chart
+  "Apples":45.0
+  "Oranges":25.0
+  "Bananas":15.0
+  "Pears":5.0
+  "Grapes":10.0
+```
+在上面的示例中，我们使用pie关键字创建了一个饼图，title用于定义图表标题，"Apples":45.0表示Apples占比45%，依次类推。
