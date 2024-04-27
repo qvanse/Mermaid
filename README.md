@@ -178,9 +178,10 @@ style
 
 在Mermaid中，可以使用style关键字来为图形设置样式。
 ```
-style <shape-id><style-attr>:<style-value>[;<style-attr>:<style-value>]...
+style <shape-id><style-attr>:<style-value>[,<style-attr>:<style-value>];
+<shape-id><style-attr>:<style-value>[,<style-attr>:<style-value>];...
 ```
-shape-id是形状的ID，style-attr是样式属性，style-value是样式值。是以为形状设置多个样式属性，多个样式属性之间用分号分隔。
+shape-id是形状的ID，style-attr是样式属性，style-value是样式值。是以为形状设置多个样式属性，多个样式属性之间用逗号分隔,多个图形之间用分号分隔。
 以下为一个示例。
 ```mermaid
 graph LR;  
@@ -189,7 +190,7 @@ C(Rectangle)-->D{Diamond};
 style A fill:#f9c;
 style B stroke:#333,stroke-width:4px;
 style C fill:#f96,stroke:#333,stroke-width:2px;
-style D fill:#fc9,stroke:#f63,stroke-width:4px;stroke-dasharray: 5
+style D fill:#fc9,stroke:#f63,stroke-width:4px,stroke-dasharray:5,width:80px,height:80px;
 ```
 fill：填充颜色。
 stroke：边框颜色。
@@ -199,3 +200,27 @@ stroke-dasharray：边框虚线。
 除了这些属性外，还可以使用其他属性来设置样式。font-size、font-weight、font-family、text-align、text-decoration等。
 
 还可以使用style为图形设置大小。要设置形状的大小，还可以使用width和height属性。
+
+loop和alt
+
+在Mermaid中，可以使用loop和alt关键字来定义循环和条件块。
+loop: 定义一个循环块。可以让一组形状重复多次。语句如下：
+```
+loop [循环次数]
+  [形状1]   
+  [形状2]   
+  ...
+end
+```
+alt: 定义一个条件块。可以让一组形状根据条件执行。语句如下：
+```
+alt [条件1]
+  [路径1] 
+else if [条件2]  
+  [路径2]
+else
+  [路径3]
+end
+```
+在上面的语法中，alt 关键字后面可以跟一个可选的条件，表示条件块的条件。然后，我们可以定义多个路径，表示根据条件选择的不同路径。else if 和 else 是可选的，可以定义多个条件和路径。
+
