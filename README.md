@@ -174,3 +174,28 @@ pie
   ```
 使用连接符时，根据业务需求，选择合适的连接方式。还可以使用style为连接设置样式。
   
+style
+
+在Mermaid中，可以使用style关键字来为图形设置样式。
+```
+style <shape-id><style-attr>:<style-value>[;<style-attr>:<style-value>]...
+```
+shape-id是形状的ID，style-attr是样式属性，style-value是样式值。是以为形状设置多个样式属性，多个样式属性之间用分号分隔。
+以下为一个示例。
+```mermaid
+graph LR;  
+A[Square]-->B((Circle));
+C(Rectangle)-->D{Diamond};
+style A fill:#f9c;
+style B stroke:#333,stroke-width:4px;
+style C fill:#f96,stroke:#333,stroke-width:2px;
+style D fill:#fc9,stroke:#f63,stroke-width:4px;stroke-dasharray: 5
+```
+fill：填充颜色。
+stroke：边框颜色。
+stroke-width：边框宽度。
+stroke-dasharray：边框虚线。
+
+除了这些属性外，还可以使用其他属性来设置样式。font-size、font-weight、font-family、text-align、text-decoration等。
+
+还可以使用style为图形设置大小。要设置形状的大小，还可以使用width和height属性。
