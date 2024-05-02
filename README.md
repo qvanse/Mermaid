@@ -224,3 +224,47 @@ end
 ```
 在上面的语法中，alt 关键字后面可以跟一个可选的条件，表示条件块的条件。然后，我们可以定义多个路径，表示根据条件选择的不同路径。else if 和 else 是可选的，可以定义多个条件和路径。
 
+loop 和 alt的主要区别在于它们的用途和语法。loop用于定义循环块，可以让一组形状重复多次。alt用于定义条件块，可以根据条件选择不同的路径执行。
+
+Mermaid 绘图 分类示范
+Flowchart流程图
+```
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+```
+```Mermaid
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+```
+```
+flowchart LR;
+A[Hard edge]-->|Link text|B(Round edge);
+B-->C{Decision};
+C-->|One|D[Result one];
+C-->|Two|E[Result two];
+```
+```Mermaid
+flowchart LR;
+A[Hard edge]-->|Link text|B(Round edge);
+B-->C{Decision};
+C-->|One|D[Result one];
+C-->|Two|E[Result two];
+```
+```
+flowchart LR;
+id1(start)-->id2(stop);
+style id1 fill:#f9f,stroke:#333,stroke-width:4px;
+style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color=#fff,stroke-dasharray:5,5;
+```
+```Mermaid
+flowchart LR;
+id1(start)-->id2(stop);
+style id1 fill:#f9f,stroke:#333,stroke-width:4px;
+style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray:5,5;
+```
